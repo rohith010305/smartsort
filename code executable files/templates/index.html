@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartSorting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html { font-family: 'Montserrat', sans-serif; height: 100%; overflow: hidden; }
+    .bg-container { background: url('https://wallpaperaccess.com/full/1189783.jpg') no-repeat center center/cover; height: 100vh; position: relative; }
+    .overlay { background-color: rgba(0, 0, 0, 0.6); position: absolute; width: 100%; height: 100%; display: flex; flex-direction: column; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background-color: rgba(0, 0, 0, 0.5); backdrop-filter: blur(5px); }
+    nav .logo { font-size: 1.5rem; font-weight: bold; }
+    nav .logo a { color: white; text-decoration: none; }
+    nav ul { list-style: none; display: flex; }
+    nav ul li { margin-left: 2rem; }
+    nav ul li a { color: white; text-decoration: none; font-weight: 500; position: relative; }
+    nav ul li a::after { content: ''; position: absolute; width: 0; height: 2px; background: #ff004f; left: 0; bottom: -5px; transition: width 0.3s; }
+    nav ul li a:hover::after { width: 100%; }
+    .center-text { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; }
+    .center-text h2 { font-weight: normal; margin-bottom: 0.5rem; text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff; }
+    .center-text h1 { font-size: 3rem; font-weight: 700; color: white; }
+    .center-text p { margin-top: 1rem; font-size: 1rem; max-width: 700px; }
+    .center-text button { margin-top: 1.5rem; padding: 0.7rem 1.5rem; font-size: 0.9rem; background: transparent; border: 2px solid white; color: white; cursor: pointer; border-radius: 20px; transition: background 0.3s; }
+    .center-text button:hover { background: white; color: black; }
+  </style>
+</head>
+<body>
+  <div class="bg-container">
+    <div class="overlay">
+      <nav>
+        <div class="logo"><a href="{{ url_for('home') }}">SmartSorting</a></div>
+        <ul>
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('predict') }}">Predict</a></li>
+          <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="center-text">
+        <h2>Welcome to <strong>SmartSorting</strong></h2>
+        <h1>GREENGUARD INSIGHTS</h1>
+        <p>We are a team of innovative scientists and technologists dedicated to ensuring your produce is always fresh and healthy.</p>
+        <button onclick="window.location.href='{{ url_for('predict') }}'">GET STARTED</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

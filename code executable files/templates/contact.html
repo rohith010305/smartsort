@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - SmartSorting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #e8f5e9;
+      color: #1b5e20;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 2rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      margin: 2rem 0 1rem;
+      color: #2e7d32;
+    }
+
+    .subtitle {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #388e3c;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .column {
+      width: 280px;
+      margin: 10px;
+    }
+
+    h2 {
+      font-size: 18px;
+      text-decoration: underline;
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin: 8px 0;
+      line-height: 1.4;
+    }
+
+    a {
+      color: #1b5e20;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .icons i {
+      margin-right: 8px;
+      color: #2e7d32;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      max-width: 500px;
+      margin: 3rem auto;
+      text-align: center;
+    }
+
+    .contact-form h2 {
+      color: #2e7d32;
+      margin-bottom: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .contact-form button {
+      padding: 0.7rem 2rem;
+      background-color: #43a047;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #2e7d32;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo"><a href="{{ url_for('home') }}">SmartSorting</a></div>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('predict') }}">Predict</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>GET IN TOUCH</h1>
+  <p class="subtitle">FOR ANY QUERIES PLEASE CONTACT</p>
+
+  <div class="container">
+    <!-- Name Column -->
+    <div class="column">
+      <h2>NAME</h2>
+      <p><strong>M Sai Gowtham Reddy</strong></p>
+      <p><strong>M Jhansi</strong></p>
+      <p><strong>P Rohith Kumar Reddy</strong></p>
+      <p><strong>Madduru Shobha Rani</strong></p>
+      <p><strong>Masi Reddy Kiran</strong></p>
+    </div>
+
+    <!-- Phone Column -->
+    <div class="column">
+      <h2>PHONE</h2>
+      <p class="icons"><i class="fas fa-phone"></i>8989242475</p>
+      <p class="icons"><i class="fas fa-phone"></i>7671892494</p>
+      <p class="icons"><i class="fas fa-phone"></i>9381373509</p>
+      <p class="icons"><i class="fas fa-phone"></i>8919163545</p>
+      <p class="icons"><i class="fas fa-phone"></i>8639582404</p>
+    </div>
+
+    <!-- Email Column -->
+    <div class="column">
+      <h2>EMAIL</h2>
+      <p class="icons"><i class="fas fa-envelope"></i><a href="mailto:Gowthamreddy2624@gmail.com">Gowthamreddy2624@gmail.com</a></p>
+      <p class="icons"><i class="fas fa-envelope"></i><a href="mailto:Jhansi162005@gmail.com">Jhansi162005@gmail.com</a></p>
+      <p class="icons"><i class="fas fa-envelope"></i><a href="mailto:Patilrohithreddy0103@gmail.com">Patilrohithreddy0103@gmail.com</a></p>
+      <p class="icons"><i class="fas fa-envelope"></i><a href="mailto:Ranimshobha7@gmail.com">Ranimshobha7@gmail.com</a></p>
+      <p class="icons"><i class="fas fa-envelope"></i><a href="mailto:Reddykiranmasi@gmail.com">Reddykiranmasi@gmail.com</a></p>
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="contact-form">
+    <h2>Have Questions or Suggestions?</h2>
+    <p>Send us a message and we’ll get back to you soon.</p>
+    <form action="mailto:Gowthamreddy2624@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - SmartSorting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Montserrat', sans-serif; background-color: #e8f5e9; color: #1b5e20; line-height: 1.6; }
+    header { background-color: #2e7d32; color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    header .logo a { color: white; text-decoration: none; font-size: 1.5rem; font-weight: bold; }
+    nav ul { list-style: none; display: flex; }
+    nav ul li { margin-left: 2rem; }
+    nav ul li a { color: white; text-decoration: none; font-weight: 500; position: relative; }
+    nav ul li a::after { content: ''; position: absolute; width: 0; height: 2px; background: #ff004f; left: 0; bottom: -5px; transition: width 0.3s; }
+    nav ul li a:hover::after { width: 100%; }
+    main { max-width: 1000px; margin: 2rem auto; padding: 2rem; background: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    h1 { margin-bottom: 1rem; color: #2e7d32; text-align: center; }
+    p, ul { margin-bottom: 1rem; }
+    .button-container { margin-top: 2rem; display: flex; justify-content: center; }
+    .button-container a { text-decoration: none; padding: 0.8rem 2rem; background-color: #43a047; color: white; font-size: 1rem; font-weight: bold; border-radius: 30px; transition: all 0.3s ease; box-shadow: 0 8px 16px rgba(67, 160, 71, 0.3); }
+    .button-container a:hover { background-color: #2e7d32; box-shadow: 0 8px 20px rgba(46, 125, 50, 0.6); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="{{ url_for('home') }}">SmartSorting</a></div>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('predict') }}">Predict</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Learn More About Us</h1>
+    <p>SmartSorting is a pioneering organization dedicated to enhancing the quality and safety of your fruits and vegetables.</p>
+    <p>Our team comprises innovative scientists, technologists, and agricultural experts committed to leveraging advanced detection technologies to ensure the produce you consume is fresh, healthy, and nutritious.</p>
+    <ul>
+      <li>Comprehensive analysis and grading of fruits and vegetables based on ripeness and nutritional content.</li>
+      <li>Continuous monitoring of produce freshness from farm to table.</li>
+      <li>Innovative solutions to minimize food waste by identifying and separating rotten produce early in the supply chain.</li>
+    </ul>
+    <div class="button-container">
+      <a href="{{ url_for('predict') }}">Predict</a>
+    </div>
+  </main>
+</body>
+</html>
